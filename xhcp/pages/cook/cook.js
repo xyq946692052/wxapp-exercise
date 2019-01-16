@@ -5,7 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-    array: []
+    array: [],
+    indicatorDots: true,
+    autoplay: true,
+    interval: 5000,
+    duration: 1000,
+    imgUrls: ["../../images/lunbo/1.jpg", "../../images/lunbo/2.jpg", "../../images/lunbo/3.jpg", "../../images/lunbo/4.jpg"]
   },
 
   /**

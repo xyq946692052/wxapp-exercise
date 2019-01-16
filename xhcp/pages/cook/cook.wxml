@@ -1,7 +1,14 @@
 <!--pages/cook/cook.wxml-->
 <view class="content">
-  <view class="img">
-    <image src="../../images/haibao/haibao-1.jpg" style="width:100%; height:230px;"></image>
+  <view class="haibao">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image src="{{item}}" class="silde-image" style="width:100%;"></image>
+          <text>{{item}}</text>
+        </swiper-item>
+      </block>
+    </swiper>
   </view>
 
   <view class="nav">
@@ -33,29 +40,33 @@
       <view>闪购</view>
     </view>
   </view>
+
+  
   <view class="hr"></view>
 
   <view class="head">
-     <view>哈根头条</view> 
-     <view class="right">>></view>
+    <view>哈根头条</view>
+    <view class="right">>></view>
   </view>
- 
+
   <view class="list">
-      <block wx:for="{{array}}">
-        <view class="item" bindtap="seeDetail" id="0">
-            <view>
-                <view> <image src="{{item.img}}" style="width:75px;height:58px;"></image></view>
-            </view>
-            <view class="desc">
-                <view class="title">{{item.title}}</view>
-                <view class="count">
-                    <view>{{item.type}}</view>
-                    <view class="liulan">{{item.liulan}}</view>
-                    <view class="pinglun">{{item.pinglun}}</view>
-                </view>
-            </view>
+    <block wx:for="{{array}}">
+      <view class="item" bindtap="seeDetail" id="0">
+        <view>
+          <view>
+            <image src="{{item.img}}" style="width:75px;height:58px;"></image>
+          </view>
         </view>
-        <view class="hr2"></view>
-      </block>
+        <view class="desc">
+          <view class="title">{{item.title}}</view>
+          <view class="count">
+            <view>{{item.type}}</view>
+            <view class="liulan">{{item.liulan}}</view>
+            <view class="pinglun">{{item.pinglun}}</view>
+          </view>
+        </view>
+      </view>
+      <view class="hr2"></view>
+    </block>
   </view>
 </view>

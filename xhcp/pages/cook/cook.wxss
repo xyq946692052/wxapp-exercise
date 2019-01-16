@@ -5,8 +5,8 @@
   text-align: center;
 }
 .nav-item{
-  width: 25%;
-  margin-top:25%;
+  width: 100px;
+  margin-top:10%;
   font-size: 12px;
 }
 .hr{

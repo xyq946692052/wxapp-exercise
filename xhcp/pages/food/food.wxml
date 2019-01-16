@@ -1,2 +1,34 @@
 <!--pages/food/food.wxml-->
-<text>pages/food/food.wxml</text>
+<view class="section">
+  <view class="section_title">scroll-view纵向滚动</view>
+  <scroll-view scroll-y="true" style="height:200px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <view id="green" style="width:100%;height:100px;background-color:green;"></view>
+    <view id="red" style="width:100%;height:100px;background-color:red;"></view>
+    <view id="blue" style="width:100%;height:100px;background-color:blue;"></view>
+  </scroll-view>
+
+  <view class="btn-area">
+    <button type="default" style="margin:10px;" bindtap="tap">Click me scroll into view</button>
+    <button type="default" style="margin:10px;" bindtap="tapMove">Click me to scroll</button>
+  </view>
+</view>
+
+<view class="section">
+  <view class="section_title">新闻频道滚动</view>
+  <scroll-view scroll-x="true" style="width:100%;white-space:nowrap">
+    <view style="display:flex; flex-direction:row;">
+      <view style="margin-right:20px;">新闻</view>
+      <view style="margin-right:20px;">视频</view>
+      <view style="margin-right:10px;">图片</view>
+      <view style="margin-right:10px;">生活</view>
+      <view style="margin-right:10px;">健康</view>
+      <view style="margin-right:10px;">财经</view>
+      <view style="margin-right:10px;">房产</view>
+      <view style="margin-right:10px;">汽车</view>
+      <view style="margin-right:10px;">深圳</view>
+      <view style="margin-right:10px;">佛山</view>
+      <view style="margin-right:10px;">旅游</view>
+      <view style="margin-right:10px;">情感</view>
+    </view>
+  </scroll-view>
+</view>
