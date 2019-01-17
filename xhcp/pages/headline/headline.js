@@ -9,17 +9,33 @@ Page({
     autoplay: true,
     interval: 5000,
     duration: 1000,
-    imgUrls: ["../../images/lunbo/1.jpg", "../../images/lunbo/2.jpg", "../../images/lunbo/3.jpg", "../../images/lunbo/4.jpg"]
-
+    imgUrls: ["../../images/lunbo/1.jpg", "../../images/lunbo/2.jpg", "../../images/lunbo/3.jpg", "../../images/lunbo/4.jpg"],
+    currentTab:0,
+    winWidth:0,
+    winHeight:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+      var page = this;
+      wx.getSystemInfo({
+        success: function(res){
+          console.log(res);
+          page.setData({winWidth:res.windowWidth});
+          page.setData({winHeight:res.windowHeight});
+        }
+      })
   },
-
+  switchNav:function(e){
+    var page = this;
+    if(this.data.currentTab==e.target.dataset.current){
+      return false;
+    }else{
+      page.setData({currentTab:e.target.dataset.current});
+    }
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
