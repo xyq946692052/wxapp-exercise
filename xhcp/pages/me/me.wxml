@@ -1,2 +1,64 @@
-<!--pages/me/me.wxml-->
-<text>pages/me/me.wxml</text>
+<text>Input inputarea 输入框</text>
+<view class="section">
+  <input placeholder="这是一个可以自动聚焦的input" auto-focus/>
+</view>
+
+<view class="section">
+  <input placeholder="这是只有在单击按钮的时候才聚焦" focus="{{focus}}" />
+  <button bindtap="bindButtonTap">使得输入框获取焦点></button>
+</view>
+
+<view class="section">
+  <input maxlength="10" placeholder="最大输入长度10" />
+</view>
+
+<view class="section">
+  <view class="section_title">你输入的是: {{inputValue}}</view>
+  <input bindinput="bindKeyInput" placeholder="输入同步到view中" />
+</view>
+
+<view class="section">
+  <input bindinput="bindReplaceInput" placeholder="连续的两个1会变成2" />
+</view>
+
+<view class="section">
+  <input bindinput="bindHideKeyboard" placeholder="输入123自动收起键盘" />
+</view>
+
+<view class="section">
+  <input password type="number" />
+</view>
+
+<view class="section">
+    <input password type="text"/>
+</view>
+<view class="section">
+<input type="digit" placeholder="带小数点的数字键盘" /></view>
+
+<view class="section">
+    <input placeholder-style="color:red;" placeholder="占位符字体是红色的"/>
+</view>
+
+<view class="hr"></view>
+
+<view class="section">
+    <textarea bindblur="bindTextAreaBlur" auto-height placeholder="自动变高" />
+</view>
+<view class="section">
+    <textarea placeholder="placeholder颜色是绿色的" placeholder-style="color:green"/>
+</view>
+
+<view class="hr"></view>
+<text>Label</text>
+<label>
+    <button bindtap="clickBtn" hidden>我是button按钮</button>
+    <view>我是label组件内的内容</view>
+    <checkbox-group bindchange="checkboxChange">
+        <checkbox value="中国"/>中国
+        <checkbox value="美国"/>美国
+    </checkbox-group>
+    <radio-group bindchange="radioChange">
+      <radio value="男"/>男
+      <radio value="女"/>女
+    </radio-group>
+</label>

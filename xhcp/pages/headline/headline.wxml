@@ -21,12 +21,15 @@
   <view class="hr2"></view>
 
   <swiper current="{{currentTab}}" style="height:{{winHeight}}px">
-      <swiper-item>
-          <view style="margin-top:10px;border:1px solid #cccccc;width:99%;height:200px;">我是用来进行账号密码登录区域</view>
-      </swiper-item>
+    <swiper-item>
+      <view style="margin-top:10px;border:1px solid #cccccc;width:99%;height:200px;">我是用来进行账号密码登录区域</view>
+    </swiper-item>
 
-        <swiper-item>
-          <view style="margin-top:10px;border:1px solid #cccccc;width:99%;height:200px;">我是用来进行手机快捷登录区域</view>
-      </swiper-item>
+    <swiper-item>
+      <view style="margin-top:10px;border:1px solid #cccccc;width:99%;height:200px;">我是用来进行手机快捷登录区域</view>
+    </swiper-item>
   </swiper>
 </view>
+
+<view class="hr2"></view>
+
