@@ -32,3 +32,38 @@
     </view>
   </scroll-view>
 </view>
+
+<view class='section section_gap'>
+  <text class='section__title'>设置step</text>
+  <view class='body-view'>
+    <slider bindchange='sliderchange' step='5' show-value></slider>
+  </view>
+</view>
+
+<view class='section section_gap'>
+  <text class='section__title'>显示当前</text>
+  <view class='body-view'>
+    <slider bindchange='sliderchange' show-value></slider>
+  </view>
+</view>
+
+<view class='section_gap'>
+  <text class='section__title'>设置最小/最大值</text>
+  <view class='body-view'>
+    <slider bindchange='sliderchange' min='50' max='200' show-value></slider>
+  </view>
+</view>
+
+<view class='section section_gap'>
+  <text class='section__title'>设置颜色</text>
+  <view class='body-view'>
+    <slider bindchange='sliderchange' color='black' selected-color='red' show-value></slider>
+  </view>
+</view>
+
+<view class='section section_gap'>
+<text class='section__title'>禁用</text>
+<view class='body-view'>
+   <slider bindchange='sliderchange' disabled show-value></slider>
+</view>
+</view>
