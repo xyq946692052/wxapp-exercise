@@ -1,4 +1,21 @@
 // pages/headline/headline.js
+const date = new Date();
+const years = [];
+const months = [];
+const days = [];
+
+for (let i = 1990; i <= date.getFullYear(); i++) {
+  years.push(i);
+}
+
+for (let i = 1; i <= 12; i++) {
+  months.push(i);
+}
+
+for (let i = 1; i <= 31; i++) {
+  days.push(i);
+}
+
 Page({
 
   /**
@@ -13,6 +30,14 @@ Page({
     currentTab: 0,
     winWidth: 0,
     winHeight: 0,
+    years: years,
+    year: date.getFullYear(),
+    month: 2,
+    months: months,
+    days: days,
+    day: 2,
+    year: date.getFullYear(),
+    value: [9999, 1, 1],
 
     array: ['美国', '中国', '日本', '俄罗斯', '英国', '法国', '德国'],
     objectArray: [{
@@ -59,10 +84,19 @@ Page({
       time: e.detail.value
     })
   },
-  bindDateChange:function(e){
+  bindDateChange: function(e) {
     this.setData({
-      date:e.detail.value
+      date: e.detail.value
     })
+  },
+
+  bindchange: function(e) {
+    const val = e.detail.value;
+    this.setData({
+      year: this.data.years[val[0]],
+      month: this.data.months[val[1]],
+      day: this.data.days[val[2]]
+    });
   },
 
   /**

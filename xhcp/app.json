@@ -10,7 +10,7 @@
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#494949",
     "navigationBarTitleText": "学做菜",
-    "navigationBarTextStyle":"#fffff"
+    "navigationBarTextStyle":"white"
   },
   "tabBar":{
     "backgroundColor": "#ffffff",
