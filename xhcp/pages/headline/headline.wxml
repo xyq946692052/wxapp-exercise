@@ -66,7 +66,7 @@
     {{year}}年{{month}}月{{day}}日
   </view>
 
-  <picker-view indicator-style="height:50px" style="width:100%;height:300px;" value="{{value}}" bindchange="bindchange">
+  <picker-view indicator-style="height:50px" style="width:100%;height:200px;" value="{{value}}" bindchange="bindchange">
     <picker-view-column>
       <view wx:for="{{years}}" style="line-height:50px">{{item}}年</view>
     </picker-view-column>
@@ -80,3 +80,83 @@
 </view>
 
 <view class="hr1"></view>
+
+<view style='background-color:#cccccc;height:600px'>
+
+  <view style='padding-top:10px;'></view>
+  <view style='display:flex;flex-direction:row;background-color:#ffffff;height:50px;line-height:50px;'>
+    <view style='font-weight:bold;'>接收新消息通知</view>
+    <view style='position:absolute;right:10px;'>
+      <switch checked></switch>
+    </view>
+  </view>
+
+  <view style='height:1px;background-color:#f2f2f2;opacity:0.2'></view>
+
+  <view style='display:flex;flex-direction:row;background-color:#ffffff;height:50px;line-height:50px;'>
+    <view style='font-weight:bold;'>通知显示消息详情</view>
+    <view style='position:absolute;right:10px;'>
+      <switch type='switch'></switch>
+    </view>
+  </view>
+
+  <view style='height:1px;background-color:#f2f2f2;opacity:0.2'></view>
+
+  <view style='margin-top:20px;'></view>
+  <view style='height:1px;background-color:#f2f2f2;opacity:0.2;'></view>
+
+  <view style='display:flex;flex-direction:row;background-color:#ffffff;height:50px;line-height:50px;'>
+    <view style='font-weight:bold;'>声音</view>
+    <view style='position:absolute;right:10px;'>
+      <switch type='checkbox' checked></switch>
+    </view>
+  </view>
+
+  <view style='height:1px;background-color:#f2f2f2;opacity:0.2'></view>
+  <view style='height:1px;background-color:#f2f2f2;opacity0.2'></view>
+  <view style='display:flex;flex-direction:row;background-color:#ffffff;height:50px;line-height:50px;'>
+    <view style='font-weight:bold;'>震动</view>
+    <view style='position:absolute;right:10px;'>
+      <switch type='checkbox'></switch>
+    </view>
+  </view>
+  <view style='height:1px;background-color:#f2f2f2;opacity:0.2;'></view>
+</view>
+
+<view class="hr1"></view>
+
+<form bindsubmit='formSubmit' bindreset='formReset'>
+  <view style='margin:10px;'>
+    <view style='font-weight:bold;'>开关选择器</view>
+    <switch name='switch'></switch>
+  </view>
+  <view style='margin-top:10px;'>
+    <view style='font-weight:bold;'>slider滑动选择器</view>
+    <slider name='slider' show-value></slider>
+  </view>
+  <view style='margin-top:10px;'>
+    <view style='font-weight:bold;'>input单行输入框</view>
+    <input name='input' placeholder='please input here'></input>
+  </view>
+  <view style='margin-top:10px;'>
+    <view style='font-weight:bold;'>radio单项选择器</view>
+    <radio-group name='radio-group'>
+      <label><radio value='radio1'/>radio1</label>
+      <label><radio value='radio2'>radio2</radio></label>
+    </radio-group>
+  </view>
+  <view style='margin-top:10px;'>
+    <view style='font-weight:bold;'>checkbox多项选择器</view>
+    <checkbox-group name='checkbox'>
+      <label><checkbox value='checkbox1'>checkbox1</checkbox></label>
+      <label><checkbox value='checkbox2'>checkbox2</checkbox></label>
+    </checkbox-group>
+  </view>
+  <view style='margin-top:10px;'></view>
+  <view class='btn-area'>
+    <button form-type='submit' type='primary'>Submit</button>
+    <button form-type='reset'>Reset</button>
+  </view>
+
+
+</form>
