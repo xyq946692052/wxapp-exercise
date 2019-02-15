@@ -1,0 +1,6 @@
+<!--pages/media/media.wxml-->
+
+<text style='margin:auto;'>媒体类型练习</text>
+<button type='default' bindtap='toAudio' style='margin-top:10px;'>音频</button>
+<button type='primary' bindtap='toImage' style='margin-top:10px;'>图片</button>
+<button type='warn' bindtap='toVedio' style='margin-top:10px;'>视频</button>

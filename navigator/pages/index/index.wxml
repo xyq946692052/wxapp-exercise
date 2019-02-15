@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container">
+   <view class='btn-area'>
+     <navigator url='../navigator/navigator?title=navigator' open-type='navigate' hover-class='navigator-hover'>wx.navigator保留当前页跳转</navigator>
+     <navigator url='../redirect/redirect?title=redirect' open-type='redirect' hover-class='other-navigator-hover'>wx.redirectTo关闭当前页跳转</navigator>
+     <navigator url='../redirect/redirect' open-type='switchTab' hover-class='other-navigator-hover'>wx.switchTab跳转到tabBar页面</navigator>
+     <button type='primary' bindtap='navigateBtn' style='margin-top:10px;'>保留当前页跳转</button>
+     <button type='primary' bindtap='redirectBtn' style='margin-top:10px;'>关闭当前页跳转</button>
+     <button type='primary' bindtap='switchBtn' style='margin-top:10px'>跳转到tabBar页面</button>
+
+     <button type='primary' bindtap='toMediaBtn' style='margin-top:10px'>跳转到media页面</button>
+   </view>
+
+</view>

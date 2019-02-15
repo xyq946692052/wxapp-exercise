@@ -1,0 +1,2 @@
+<!--pages/redirect/redirect.wxml-->
+<view>关闭当前页进行跳转，跳转后无法返回到当前页</view>

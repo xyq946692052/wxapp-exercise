@@ -42,14 +42,3 @@ Page({
   }
 })
 
-for (var i = 0; i < types.length; i++) {
-  (function(type) {
-    pageObject[type] = function(e) {
-      var key = type + 'Size'
-      var changedData = {}
-      changedData[key] = this.data[key] === 'default' ? 'mini' : 'default'
-      this.setData(changedData)
-    }
-  })(types[i])
-}
-Page(pageObject)

@@ -1,0 +1,4 @@
+/* pages/audio/audio.wxss */
+page{
+  background-color:  gainsboro;
+}
