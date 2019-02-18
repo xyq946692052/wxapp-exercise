@@ -32,6 +32,16 @@ Page({
       url: '../video/video',
     })
   },
+  toMap:function(){
+    wx.navigateTo({
+      url: '../map/map',
+    })
+  },
+  toCanvas:function(){
+    wx.navigateTo({
+      url: '../canvas/canvas',
+    })
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

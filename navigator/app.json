@@ -7,7 +7,9 @@
     "pages/media/media",
     "pages/audio/audio",
     "pages/image/image",
-    "pages/video/video"
+    "pages/video/video",
+    "pages/map/map",
+    "pages/canvas/canvas"
   ],
   "window": {
     "backgroundTextStyle": "light",
